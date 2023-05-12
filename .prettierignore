@@ -1,0 +1,8 @@
+node_modules
+.nuxt
+public
+.npmrc
+README.md
+package-lock.json
+yarn.lock
+.stylelintrc.js
