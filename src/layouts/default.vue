@@ -1,10 +1,11 @@
 <template>
-  <main>
-    <h1>パス: {{ pagePath }}</h1>
+  <VHeader />
+  <main class="w-full px-8">
     <slot />
   </main>
+  <VFooter />
 </template>
 <script setup lang="ts">
   const route = useRoute();
-  const pagePath = route.path;
+  const pagePath = computed(() => route.path);
 </script>

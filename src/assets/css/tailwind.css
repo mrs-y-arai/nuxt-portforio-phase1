@@ -5,6 +5,9 @@
 @layer base {
   /* CSS変数の定義 */
   :root {
-    --primary: #ffd700;
+    --primary: #fff641;
+    --secondPrimary: #2bea39;
+    --black: #333333;
+    --white: #ffffff;
   }
 }
