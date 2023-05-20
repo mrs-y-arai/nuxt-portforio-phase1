@@ -16,6 +16,7 @@ module.exports = {
         secondPrimary: "var(--secondPrimary)",
         black: "var(--black)",
         white: "var(--white)",
+        grey: "var(--grey)",
       },
     },
   },

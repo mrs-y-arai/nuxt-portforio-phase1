@@ -20,9 +20,4 @@ export const MenuList: MenuListType[] = [
     to: "/works",
     name: "works",
   },
-  {
-    id: 4,
-    to: "/contact",
-    name: "contact",
-  },
 ];

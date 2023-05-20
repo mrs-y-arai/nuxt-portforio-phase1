@@ -20,7 +20,6 @@
 <style scoped>
   .flow-text {
     animation: flowText 60s linear infinite;
-    color: #c0c0c0;
   }
 
   @keyframes flowText {

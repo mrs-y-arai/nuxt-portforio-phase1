@@ -7,7 +7,11 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-microcms-module"],
+  microCMS: {
+    serviceDomain: "yuki-arai-portforio",
+    apiKey: "XhvnQPgHoxFJy6bVBm0zBuKCpSKsBleqyiUu",
+  },
   srcDir: "src/",
   css: ["@/assets/css/tailwind.css"],
   components: [

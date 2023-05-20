@@ -6,8 +6,9 @@
   /* CSS変数の定義 */
   :root {
     --primary: #fff641;
-    --secondPrimary: #2bea39;
+    --secondPrimary: #35dd41;
     --black: #333333;
     --white: #ffffff;
+    --grey: #c0c0c0;
   }
 }
