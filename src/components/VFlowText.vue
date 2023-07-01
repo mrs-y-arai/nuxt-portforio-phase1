@@ -1,8 +1,10 @@
 <template>
   <div class="w-screen flex items-center">
     <template v-for="item in 2" :key="item">
-      <span class="whitespace-nowrap font-bold text-8xl flow-text">
-        {{ props.content }}
+      <span
+        class="whitespace-nowrap font-bold text-8xl flow-text bg-clip-text text-transparent bg-gradient-to-b from-darkGrey to-transparent"
+      >
+        {{ content }}
       </span>
     </template>
   </div>
@@ -11,8 +13,7 @@
   interface Props {
     content: string;
   }
-
-  const props = withDefaults(defineProps<Props>(), {
+  withDefaults(defineProps<Props>(), {
     content: "",
   });
 </script>

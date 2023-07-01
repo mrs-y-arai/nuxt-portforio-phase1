@@ -1,25 +1,49 @@
 <template>
-  <div class="w-auto h-auto" :class="classes">
-    <NuxtLink class="w-full h-full block" :to="props.link">
+  <component
+    :is="baseTag"
+    :class="classes"
+    class="flex items-center justify-center bg-gradient-to-r from-primary to-secondPrimary duration-300 active:scale-95 hover:scale-105 hover:shadow-md hover:shadow-grey"
+    v-bind="{ ...$attrs, ...attrs }"
+  >
+    <span class="text-white font-semibold">
       <slot />
-    </NuxtLink>
-  </div>
+    </span>
+  </component>
 </template>
 <script setup lang="ts">
+  import { AnchorHTMLAttributes } from "nuxt/dist/app/compat/capi";
+
   interface Props {
-    link: string;
     size: "sm" | "md" | "lg";
     shape: "rounded" | "sharp";
-    type: "gradient" | "outlined";
-    color?: "black" | "primary";
+    href?: AnchorHTMLAttributes["href"];
+    to?: string;
   }
 
   const props = withDefaults(defineProps<Props>(), {
-    link: "/contact",
     size: "md",
     shape: "rounded",
-    type: "gradient",
   });
 
-  const classes = computed(() => {});
+  const classes = computed(() => ({
+    "w-40 h-10 text-lg": props.size === "sm",
+    "w-48 h-12 text-xl": props.size === "md",
+    "w-80 h-14 text-2xl": props.size === "lg",
+    "rounded-[20px]": props.size === "sm" && props.shape === "rounded",
+    "rounded-[24px]": props.size === "md" && props.shape === "rounded",
+    "rounded-[30px]": props.size === "lg" && props.shape === "rounded",
+    "rounded-none": props.shape === "sharp",
+  }));
+
+  const baseTag = computed(() => {
+    if (props.to) return "router-link";
+    if (props.href) return "a";
+    return "button";
+  });
+
+  const attrs = computed(() => {
+    if (baseTag.value === "router-link") return { to: props.to };
+    if (baseTag.value === "a")
+      return { href: props.href, rel: "noopener noreferrer", target: "_blank" };
+  });
 </script>
