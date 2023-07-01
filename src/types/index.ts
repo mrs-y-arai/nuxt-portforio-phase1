@@ -1,9 +1,9 @@
 import type { MicroCMSImage } from "microcms-js-sdk";
 
-export interface Works {
+export type Works = {
   id: string;
   title: string;
-  url: string;
+  URL: string;
   comment: string;
   thumbnail?: MicroCMSImage;
   role?: string;
@@ -11,4 +11,4 @@ export interface Works {
   updatedAt: string;
   publishedAt: string;
   revisedAt: string;
-}
+};
