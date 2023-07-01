@@ -20,4 +20,9 @@ export const MenuList: MenuListType[] = [
     to: "/works",
     name: "works",
   },
+  {
+    id: 3,
+    to: "/skills",
+    name: "skills",
+  },
 ];
