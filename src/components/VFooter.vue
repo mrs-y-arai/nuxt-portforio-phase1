@@ -6,7 +6,7 @@
     <nav class="mb-6">
       <ul class="flex gap-4">
         <li v-for="item in MenuList" :key="item.id">
-          <nuxt-link class="capitalize text-lg" :to="item.to">{{
+          <nuxt-link class="capitalize text-lg text-white" :to="item.to">{{
             item.name
           }}</nuxt-link>
         </li>
@@ -21,7 +21,8 @@
             class="w-9 block"
             :href="item.to"
           >
-            <img class="w-full h-auto" :src="item.iconUrl" :alt="item.alt" />
+            <!-- <img class="w-full h-auto" :src="item.iconUrl" :alt="item.alt" /> -->
+            <item.iconName />
           </a>
         </li>
       </ul>

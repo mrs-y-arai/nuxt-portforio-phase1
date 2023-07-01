@@ -3,14 +3,15 @@
     <nuxt-link to="/">
       <VLogo width="120" />
     </nuxt-link>
-    <nav>
+    <nav class="flex items-center gap-4">
       <ul class="flex gap-4">
         <li v-for="item in MenuList" :key="item.id">
-          <nuxt-link class="capitalize text-lg" :to="item.to">{{
+          <nuxt-link class="capitalize text-lg text-white" :to="item.to">{{
             item.name
           }}</nuxt-link>
         </li>
       </ul>
+      <VBtn to="contact" size="sm">CONTACT</VBtn>
     </nav>
   </header>
 </template>
