@@ -5,6 +5,17 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "ja",
       },
+      link: [
+        {
+          rel: "preconnect",
+          href: "https://fonts.googleapis.com",
+        },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap",
+          crossorigin: "",
+        },
+      ],
     },
   },
   modules: ["@nuxtjs/tailwindcss", "nuxt-microcms-module"],
