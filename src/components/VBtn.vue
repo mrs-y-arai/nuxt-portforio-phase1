@@ -2,10 +2,10 @@
   <component
     :is="baseTag"
     :class="classes"
-    class="flex items-center justify-center bg-gradient-to-r from-primary to-secondPrimary duration-300 active:scale-95 hover:scale-105 hover:shadow-md hover:shadow-grey"
+    class="flex items-center justify-center bg-gradient-to-r from-primary to-secondPrimary duration-300 hover:scale-105 hover:shadow-md hover:shadow-gray active:scale-95"
     v-bind="{ ...$attrs, ...attrs }"
   >
-    <span class="text-white font-semibold">
+    <span class="font-semibold text-white">
       <slot />
     </span>
   </component>
@@ -15,7 +15,7 @@
 
   interface Props {
     size: "sm" | "md" | "lg";
-    shape: "rounded" | "sharp";
+    shape?: "rounded" | "sharp";
     href?: AnchorHTMLAttributes["href"];
     to?: string;
   }

@@ -1,8 +1,8 @@
 <template>
-  <div class="w-screen flex items-center">
+  <div class="flex w-screen items-center">
     <template v-for="item in 2" :key="item">
       <span
-        class="whitespace-nowrap font-bold text-8xl flow-text bg-clip-text text-transparent bg-gradient-to-b from-darkGrey to-transparent"
+        class="flow-text whitespace-nowrap bg-gradient-to-b from-darkGray to-transparent bg-clip-text text-8xl font-bold text-transparent"
       >
         {{ content }}
       </span>
